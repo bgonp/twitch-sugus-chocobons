@@ -26,4 +26,4 @@ Once installed and configured this script will listen all messages from chat of 
 
 This server is already developed but it is private, it also shows some statistics throgh a webpage.
 
-![Status bar](https://raw.githubusercontent.com/bgonp/sugus-vs-chocobons/master/img/statusbar.png)
+![Status bar](https://raw.githubusercontent.com/bgonp/twitch-sugus-chocobons/master/img/statusbar.png)
