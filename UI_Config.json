@@ -1,0 +1,31 @@
+{
+	"output_file": "settings.json",
+	"cooldown_user": {
+		"type": "numberbox",
+		"value": 10,
+		"label": "Cooldown usuario (segundos)",
+		"tooltip": "Tiempo que debe transcurrir entre cada ejecución del script para un usuario",
+		"group": "General"
+	},
+	"api_url": {
+		"type": "textbox",
+		"value": "",
+		"label": "API URL",
+		"tooltip": "",
+		"group": "API"
+	},
+	"api_user": {
+		"type": "textbox",
+		"value": "",
+		"label": "API USER",
+		"tooltip": "",
+		"group": "API"
+	},
+	"api_key": {
+		"type": "textbox",
+		"value": "",
+		"label": "API KEY",
+		"tooltip": "",
+		"group": "API"
+	},
+}
