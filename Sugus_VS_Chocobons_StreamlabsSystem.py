@@ -58,16 +58,16 @@ def Execute(data):
 
 	if data.IsChatMessage() and data.IsFromTwitch() and not Parent.IsOnUserCooldown(ScriptName, "", data.User):
 
-		pref = data.GetParam(0).lower()
+		preference = data.GetParam(0).lower()
 		if '!sugus':
-			pref = 'sugus'
-		elif pref == '!chocobons':
-			pref = 'chocobons'
+			preference = 'sugus'
+		elif preference == '!chocobons':
+			preference = 'chocobons'
 		else:
 			return
 
 		raw_data = ParseRawData( data.RawData )
-		if RequestPreference(raw_data['user-id'], data.UserName, pref):
+		if RequestPreference(raw_data['user-id'], data.UserName, preference):
 			Parent.AddUserCooldown(ScriptName, "", data.User, Settings.cooldown_user)
 
 	return
@@ -81,8 +81,8 @@ def Tick():
 #---------------------------------------
 # Save the key in server
 #---------------------------------------
-def RequestPreference(twitch_id, twitch_nombre, prefiere):
-	target_url = "{}?user={}&key={}&twitch_id={}&twitch_nombre={}&prefiere={}".format(Settings.api_url, Settings.api_user, Settings.api_key, twitch_id, twitch_nombre, prefiere)
+def RequestPreference(twitch_id, twitch_name, preference):
+	target_url = "{}?user={}&key={}&twitch_id={}&twitch_name={}&preference={}".format(Settings.api_url, Settings.api_user, Settings.api_key, twitch_id, twitch_name, preference)
 	response = json.loads(Parent.GetRequest(target_url,{}))
 	return response["status"] == 200
 
